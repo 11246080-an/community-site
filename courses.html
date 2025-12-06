@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>課程專區｜中正社區大學</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<!-- 頂部導覽列：三個人每一頁都複製這一段，只改「目前頁面」加粗或標示即可 -->
+	<header class="site-header">
+    	<div class="nav-bar">
+      		<div class="nav-title">中正社區大學</div>
+      		<nav class="nav-links">
+        		<a href="index.html">首頁</a>
+        		<a href="about.html">關於我們</a>
+        		<a href="school.html">校務資訊</a>
+        		<a href="courses.html"><strong>課程專區</strong></a>
+        		<a href="resources.html">外部資源</a>
+      		</nav>
+    	</div>
+  	</header>
+
+	<!-- 主要內容 -->
+	<main class="container">
+    <!-- 頁面標題 -->
+	<div class="page-title-wrapper">
+	　　<h1 class="page-main-title">課程專區</h1>
+	　　<div class="page-title-line"></div>
+	</div>
+
+
+	<!-- 區塊一：課程搜尋 -->
+    <section>
+      <h2 class="section-title">課程搜尋</h2>
+       <p class="text-small" style="margin-top:8px;">
+            可依課程名稱、編號、講師或上課星期進行查詢
+          </p>
+      <div class="box">
+        <!-- 這個 form 只是外觀，不一定要真的做搜尋功能 -->
+        <form id="course-search-form">
+          <div class="search-grid">
+            <!-- 課程名稱 -->
+            <div class="form-group">
+              <label for="course-name">課程名稱：</label>
+              <input id="course-name" type="text" class="form-input" placeholder="請輸入課程名稱">
+            </div>
+
+            <!-- 課程編號 -->
+            <div class="form-group">
+              <label for="course-code">課程編號：</label>
+              <input id="course-code" type="text" class="form-input" placeholder="例如：F2A101">
+            </div>
+
+            <!-- 講師姓名 -->
+            <div class="form-group">
+              <label for="teacher-name">講師姓名：</label>
+              <input id="teacher-name" type="text" class="form-input" placeholder="請輸入講師姓名">
+            </div>
+
+            <!-- 星期 + 搜尋按鈕 -->
+            <div class="form-group">
+              <label for="weekday">星期：</label>
+              <select id="weekday" class="form-select">
+                <option>全部</option>
+                <option>週一</option>
+                <option>週二</option>
+                <option>週三</option>
+                <option>週四</option>
+                <option>週五</option>
+                <option>週六</option>
+                <option>週日</option>
+              </select>
+
+              <button type="submit" class="btn btn-primary">搜尋</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- 區塊二：課程列表 -->
+	<section>
+	　　<h2 class="section-title">課程列表</h2>
+	　　<div class="box course-table-wrapper">
+	　　　　<table id="course-table" class="course-table">
+	　　　　　　<thead>
+	　　　　　　　　<tr>
+	　　　　　　　　　　<th>週次</th>
+	　　　　　　　　　　<th>上課時間</th>
+	　　　　　　　　　　<th>課程編號</th>
+	　　　　　　　　　　<th>課程名稱</th>
+	　　　　　　　　　　<th>講師姓名</th>
+	　　　　　　　　　　<th>學分費</th>
+	　　　　　　　　　　<th>開課狀況</th>
+	　　　　　　　　</tr>
+	　　　　　　</thead>
+	　　　　　　<tbody>
+	　　　　　　<!-- 下面是依照試算表內容產生的前 30 筆課程，你可以照這個格式繼續往下貼 -->
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2C101</td>
+	　　　　　　　　<td>自然生態輕鬆行</td>
+	　　　　　　　　<td>林金松</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2C102</td>
+	　　　　　　　　<td>文史生態采風</td>
+	　　　　　　　　<td>陳聖明</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>尚餘4名</td>
+	　　　　　	</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2C103</td>
+	　　　　　　　　<td>★手作植栽綠設計</td>
+	　　　　　　　　<td>錢琚妮</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>招生中</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2E101</td>
+	　　　　　　　　<td>◆退休族單車與美食健康騎</td>
+	　　　　　　　　<td>程計源/李詠嫻</td>
+	　　　　　　　　<td>1500元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2F101</td>
+	　　　　　　　　<td>手機攝影台北趴趴走</td>
+	　　　　　　　　<td>洪志傑</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2F102</td>
+	　　　　　　　　<td>手機攝影．城市微旅行</td>
+	　　　　　　　　<td>楊孟玲</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2F103</td>
+	　　　　　　　　<td>手機威力導演說故事-影片剪輯</td>
+	　　　　　　　　<td>吳淑敬</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2G101</td>
+	　　　　　　　　<td>英文文法入門(七)</td>
+	　　　　　　　　<td>王品清</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2G102</td>
+	　　　　　　　　<td>全美語-閱讀會話中高級</td>
+	　　　　　　　　<td>Helen P.</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2G103</td>
+	　　　　　　　　<td>日本語進階(五)</td>
+	　　　　　　　　<td>吳秀蓮</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>尚餘5名</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2G104</td>
+	　　　　　　　　<td>日本語會話進階</td>
+	　　　　　　　　<td>大崎由紀子</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>尚餘12名</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2G105</td>
+	　　　　　　　　<td>歡唱中文金曲(一)</td>
+	　　　　　　　　<td>施靜純</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2H101</td>
+	　　　　　　　　<td>粉彩素描真好玩</td>
+	　　　　　　　　<td>范子翔</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>尚餘1名</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2I101</td>
+	　　　　　　　　<td>口琴輕鬆學</td>
+	　　　　　　　　<td>劉永輝</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>尚餘13名</td>
+	　　　　　	</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2K101</td>
+	　　　　　　　　<td>筋膜舒壓瑜珈初級</td>
+	　　　　　　　　<td>李麗香</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2K102</td>
+	　　　　　　　　<td>健脊活腦增肌伸展</td>
+	　　　　　　　　<td>陳荔琪</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>上午 09:30起</td>
+	　　　　　　　　<td>F2K103</td>
+	　　　　　　　　<td>樂活肌力輕有氧</td>
+	　　　　　　　　<td>丁郁芬</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>下午 13:30起</td>
+	　　　　　　　　<td>F2A101</td>
+	　　　　　　　　<td>尋訪中國人文史地、藝術建築</td>
+	　　　　　　　　<td>林墾</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>尚餘13名</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>下午 13:30起</td>
+	　　　　　　　　<td>F2A102</td>
+	　　　　　　　　<td>書法入門</td>
+	　　　　　　　　<td>張庭溎</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>尚餘10名</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>下午 13:30起</td>
+	　　　　　　　　<td>F2A103</td>
+	　　　　　　　　<td>◆佛教寺院與石窟藝術</td>
+	　　　　　　　　<td>李冠畿</td>
+	　　　　　　　　<td>1500元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>下午 13:30起</td>
+	　　　　　　　　<td>F2A104</td>
+	　　　　　　　　<td>室內空間之美</td>
+	　　　　　　　　<td>孫啟榕</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>尚餘10名</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>下午 13:30起</td>
+	　　　　　　　　<td>F2A105</td>
+	　　　　　　　　<td>★台北走讀時光</td>
+	　　　　　　　　<td>呂其正</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>停開</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>下午 13:30起</td>
+	　　　　　　　　<td>F2B101</td>
+	　　　　　　　　<td>樂活桌遊趣</td>
+	　　　　　　　　<td>陳盈穎</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>下午 13:30起</td>
+	　　　　　　　　<td>F2B102</td>
+	　　　　　　　　<td>營造「心」空間-居家整理</td>
+	　　　　　　　　<td>余亭儀/黃思諭</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>尚餘13名</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>下午 13:30起</td>
+	　　　　　　　　<td>F2E102</td>
+	　　　　　　　　<td>餐桌上的美味(12週)</td>
+	　　　　　　　　<td>方億傑/張偉邦</td>
+	　　　　　　　　<td>2000元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>下午 13:30起</td>
+	　　　　　　　　<td>F2F104</td>
+	　　　　　　　　<td>相機手機輕鬆拍AI-APP輕鬆學</td>
+	　　　　　　　　<td>洪李燦</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>尚餘9名</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>下午 13:30起</td>
+	　　　　　　　　<td>F2F105</td>
+	　　　　　　　　<td>手機相機美拍技巧-照片編修與AI魔法應用</td>
+	　　　　　　　　<td>吳淑敬</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>尚餘5名</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>下午 13:30起</td>
+	　　　　　　　　<td>F2G106</td>
+	　　　　　　　　<td>全美語-生活美語入門</td>
+	　　　　　　　　<td>王品清</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>下午 13:30起</td>
+	　　　　　　　　<td>F2G107</td>
+	　　　　　　　　<td>生活日語初級</td>
+	　　　　　　　　<td>大崎由紀子</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<tr>
+	　　　　　　　　<td>週一</td>
+	　　　　　　　　<td>下午 13:30起</td>
+	　　　　　　　　<td>F2G108</td>
+	　　　　　　　　<td>情境日語中級會話(八)</td>
+	　　　　　　　　<td>鷲田晶子</td>
+	　　　　　　　　<td>3000元</td>
+	　　　　　　　　<td>額滿</td>
+	　　　　　　</tr>
+	　　　　　　<!-- 這裡之後你可以照格式繼續貼更多列 -->
+	　　　　　　</tbody>
+	　　　　</table>
+	　　</div>
+	</section>
+
+
+    <!-- 區塊三：課程資訊 -->
+  	<h2 class="section-title">課程資訊</h2>
+  	<div class="box">
+  		<div class="info-grid">
+    		<div class="info-item">
+      			<div class="info-title">課程編號</div>
+      			<div class="info-text">114-2 課程編號以 <strong>F2</strong> 開頭（例：F2C101）</div>
+    		</div>
+
+    		<div class="info-item">
+      			<div class="info-title">開課期間</div>
+     			<div class="info-text">114/09/01 ～ 115/01/02，共 18 週</div>
+    		</div>
+
+		    <div class="info-item">
+		    	<div class="info-title">上課時間</div>
+		    	<div class="info-text">上午 09:30｜下午 13:30｜晚間 19:00</div>
+		    </div>
+
+		    <div class="info-item">
+		    	<div class="info-title">入學資格</div>
+		    	<div class="info-text">免試入學，學歷不限，可跨區跨縣市就讀</div>
+		    </div>
+  		</div>
+	</div>
+	<!-- 區塊四：報名時間與地點 -->
+	<h2 class="section-title">報名時間與地點</h2>
+	<div class="box">
+  		<div class="info-grid">
+    		<div class="info-item">
+    			<div class="info-title">報名時間</div>
+    			<div class="info-text">
+			        週一～週五 10:00–20:00<br>
+			        週六、週日與國定假日不受理報名
+        		</div>
+    		</div>
+
+		    <div class="info-item">
+		    	<div class="info-title">報名地點</div>
+		    	<div class="info-text">
+			        <B>僅接受現場報名</B><br>
+			        社大辦公室：臺北市中正區濟南路一段 6 號（開南中學內）
+		    	</div>
+		    </div>
+		</div>
+	</div>
+	<!-- 區塊五：報名方式 -->
+	<h2 class="section-title">報名方式</h2>
+	<div class="box">
+		<div class="info-grid">
+	    	<div class="info-item">
+	    		<div class="info-title">舊生</div>
+	    		<div class="info-text">
+	        		填寫舊生報名表、學員證（遺失補辦費 100 元）、學費
+	      		</div>
+	    	</div>
+	    	<div class="info-item">
+	      		<div class="info-title">新生</div>
+	      		<div class="info-text">
+	        		新生報名表、1 吋照片 2 張、身分證正反影本、學費
+	      		</div>
+	    	</div>
+	  	</div>
+	</div>
+	<!-- 區塊六：收費標準與繳費方式 -->
+	<h2 class="section-title">收費標準與繳費方式</h2>
+	<div class="box">
+  		<div class="info-grid">
+    		<div class="info-item">
+		    	<div class="info-title">基本費用</div>
+		    	<div class="info-text">
+			        學員證 100 元<br>
+			        報名費 200 元<br>
+			        保險費 200 元<br>
+			        冷氣費 200 元
+      			</div>
+    		</div>
+    		<div class="info-item">
+      			<div class="info-title">課程費用</div>
+      			<div class="info-text">
+			        全額課程：3000 元<br>
+			        核心課程：1500 元<br>
+			        烹飪瓦斯費：400 元<br>
+			        電腦設備維護費：1000 元
+      			</div>
+    		</div>
+    		<div class="info-item">
+      			<div class="info-title">保證金課程</div>
+      			<div class="info-text">需另繳保證金 500 元</div>
+    		</div>
+    		<div class="info-item">
+      			<div class="info-title">繳費方式</div>
+      			<div class="info-text">
+        			可使用現金或刷卡。<br>
+        			<strong>※ 本校無提供現金退費</strong>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<!-- 區塊：優惠方案 -->
+	<h2 class="section-title">優惠方案</h2>
+	<div class="box">
+  		<table class="course-table" style="margin-top:12px;">
+    		<thead>
+      			<tr>
+			        <th>期間</th>
+			        <th>舊生優惠</th>
+			        <th>新生優惠</th>
+			        <th>備註</th>
+      			</tr>
+    		</thead>
+    		<tbody>
+			    <tr>
+			        <td>6/30～7/5</td>
+			        <td>課業費 9 折＋免冷氣費</td>
+			        <td>尚未開放</td>
+			        <td>6/30 預約入校；6/27 網路登錄</td>
+			    </tr>
+      			<tr>
+			        <td>7/7～7/11</td>
+			        <td>課業費 9 折＋免冷氣費</td>
+			        <td>課業費 95 折＋免冷氣費</td>
+			        <td>7/7 預約入校；7/4 網路登錄</td>
+			    </tr>
+			    <tr>
+			        <td>7/14～7/24</td>
+			        <td>課業費 95 折＋免冷氣費</td>
+			        <td>—</td>
+			        <td>7/25 行政研習休館</td>
+			    </tr>
+			    <tr>
+			        <td>7/28～8/29</td>
+			        <td>免冷氣費</td>
+			        <td>—</td>
+			        <td>暑期時間依官網公告</td>
+			    </tr>
+			    <tr>
+			        <td>9/1 起</td>
+			        <td>依市府規定全額收費</td>
+			        <td>—</td>
+			        <td>—</td>
+			    </tr>
+   			</tbody>
+  		</table>
+	</div>
+	<!-- 區塊七：學分制度 -->
+	<h2 class="section-title">學分制度</h2>
+	<div class="box">
+  		<div class="info-grid">
+    		<div class="info-item">
+      			<div class="info-title">課程學分</div>
+      			<div class="info-text">
+        			每學分 18 小時；每門課 3 學分；每週上課一次
+      			</div>
+    		</div>
+    		<div class="info-item">
+      			<div class="info-title">上課時數</div>
+      			<div class="info-text">
+        			每學分 50 分鐘課程＋10 分鐘休息<br>
+        			晚間課程多於 21:30–21:40 下課
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<!-- 區塊九：教學模式與注意事項 -->
+	<h2 class="section-title">教學模式與注意事項</h2>
+	<div class="box">
+  		<div class="info-grid">
+    		<div class="info-item">
+      			<div class="info-title">線上課程</div>
+      			<div class="info-text">全期採線上教學</div>
+    		</div>
+    		<div class="info-item">
+      			<div class="info-title">混成課程</div>
+      			<div class="info-text">
+        			以實體或同步線上為主；遇不可抗力可改為全線上
+      			</div>
+    		</div>
+    		<div class="info-item">
+      			<div class="info-title">實體課程</div>
+      			<div class="info-text">
+        			遇停課後將補課或依班級調整教學方式
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<!-- 區塊九：校園入校時間 -->
+	<h2 class="section-title">校園入校時間</h2>
+	<div class="box">
+  		<div class="info-grid">
+    		<div class="info-item">
+      			<div class="info-title">上午課程</div>
+      			<div class="info-text">09:00 起入校</div>
+    		</div>
+    		<div class="info-item">
+      			<div class="info-title">下午課程</div>
+      			<div class="info-text">13:00 起入校</div>
+    		</div>
+    		<div class="info-item">
+      			<div class="info-title">晚間課程</div>
+      			<div class="info-text">
+        			18:00 起入校；請於 21:40 前離校
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<!-- 區塊十一：其他說明 -->
+	<h2 class="section-title">其他說明</h2>
+	<div class="box">
+		<ul class="text-small">
+		    <li>開課現況與班級餘額僅供參考，請於上班時間洽詢 (02) 2327-8441</li>
+		    <li>暑假期間及特殊日期之辦公時間調整，以官網公告為準</li>
+		    <li>招生資訊若有未竟事宜，以官方公告為準</li>
+	  	</ul>
+	</div>
+
+    <!-- 下載報名表 -->
+    <section>
+        <div class="download-row">
+          <span><B>報名表下載：</B></span>
+          <button class="btn btn-outline" onclick="window.open('pdf/old.pdf')">舊生報名表</button>
+          <button class="btn btn-outline" onclick="window.open('pdf/new.pdf')">新生報名表</button>
+        </div>
+      </div>
+    </section>
+
+	</main>
+	<script>
+	　　// 綁定搜尋表單（你的 form 請記得要加 id="course-search-form"）
+	　　const searchForm　=　document.getElementById('course-search-form');
+
+	　　searchForm.addEventListener('submit', function(event) {
+	　　　　event.preventDefault();　// 不重新載入頁面
+
+	　　　　// 取得使用者輸入的搜尋條件
+	　　　　const nameInput　=　document.getElementById('course-name').value.trim().toLowerCase();
+	　　　　const codeInput　=　document.getElementById('course-code').value.trim().toLowerCase();
+	　　　　const teacherInput　=　document.getElementById('teacher-name').value.trim().toLowerCase();
+	　　　　const weekdayInput　=　document.getElementById('weekday').value.trim();　// 週一、週二…
+
+	　　　　// 抓取課程表裡所有資料列
+	　　　　const table　=　document.getElementById('course-table');
+	　　　　const rows　=　table.querySelectorAll('tbody tr');
+
+	　　　　rows.forEach(function(row) {
+	　　　　　　const cells　=　row.querySelectorAll('td');
+	　　　　　　if (cells.length === 0) return;
+
+	　　　　　　// 對應欄位（依照你提供的 30 筆資料的欄位順序）
+	　　　　　　const weekText　=　cells[0].textContent.trim();　　　　　　　　　　　// 週次（例：週一）
+	　　　　　　const timeText　=　cells[1].textContent.trim();　　　　　　　　　　　// 上課時間（未用）
+	　　　　　　const codeText　=　cells[2].textContent.trim().toLowerCase();　　// 課程編號
+	　　　　　　const nameText　=　cells[3].textContent.trim().toLowerCase();　　// 課程名稱
+	　　　　　　const teacherText　=　cells[4].textContent.trim().toLowerCase(); // 講師姓名
+
+	　　　　　　let match　=　true;
+
+	　　　　　　// 課程名稱關鍵字比對
+	　　　　　　if (nameInput && !nameText.includes(nameInput)) {
+	　　　　　　　　match = false;
+	　　　　　　}
+
+	　　　　　　// 課程編號比對
+	　　　　　　if (match && codeInput && !codeText.includes(codeInput)) {
+	　　　　　　　　match = false;
+	　　　　　　}
+
+	　　　　　　// 講師姓名
+	　　　　　　if (match && teacherInput && !teacherText.includes(teacherInput)) {
+	　　　　　　　　match = false;
+	　　　　　　}
+
+	　　　　　　// 星期比對（若選「全部」則不篩）
+	　　　　　　if (match && weekdayInput !== "" && weekdayInput !== "全部") {
+	　　　　　　　　if (weekText !== weekdayInput) {
+	　　　　　　　　　　match = false;
+	　　　　　　　　}
+	　　　　　　}
+
+	　　　　　　// 顯示或隱藏資料列
+	　　　　　　row.style.display = match ? "" : "none";
+	　　　　});
+	　　});
+	</script>
+</body>
+</html>

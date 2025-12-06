@@ -1,0 +1,1117 @@
+/* ===============================
+   全站變數設定 (Root Variables)
+   =============================== */
+:root {
+  --color-bg: #f5f7fb;                /* 淺灰藍背景 */
+  --color-surface: #ffffff;           /* 白色卡片 */
+  --color-surface-soft: #f9fafc;
+  
+  --color-primary: #4a90a4;           /* 主色：藍綠 */
+  --color-primary-soft: #e3f2f6;      
+  --color-accent: #f2a66a;            /* 輔助：杏橘 */
+
+  --color-text-main: #2f3a4a;         /* 主文字深藍灰 */
+  --color-text-sub: #6c7586;          /* 次文字灰 */
+  --color-border-soft: #dde3ee;       /* 柔邊框 */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  --shadow-soft: 0 8px 18px rgba(15, 35, 52, 0.08);
+  --shadow-subtle: 0 2px 6px rgba(15, 35, 52, 0.06);
+}
+
+/* ===============================
+   基礎與排版 (Base & Layout)
+   =============================== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+  color: var(--color-text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1200px; /* 統一為較寬的版面 */
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+/* ===============================
+   導覽列 (Header & Navigation)
+   =============================== */
+.site-header {
+  background: linear-gradient(120deg, #4a90a4, #6fb0c0);
+  color: #fff;
+  box-shadow: var(--shadow-subtle);
+}
+
+.nav-bar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-title {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  transition: background 0.18s ease, transform 0.12s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.nav-links a.active, 
+.nav-links a strong {
+  background-color: rgba(255, 255, 255, 0.26);
+  font-weight: 700;
+}
+
+/* ===============================
+   標題樣式 (Typography)
+   =============================== */
+.page-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 20px 0 4px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-main);
+}
+
+.section-title::before {
+  content: "";
+  width: 6px;
+  height: 18px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+}
+
+.page-title-line {
+  width: 100%;
+  height: 1.5px;
+  background-color: #d8e4ea;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   卡片、表格與容器 (Cards & Tables)
+   =============================== */
+.box {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 18px 22px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* 表格捲動容器 (來自 style.css) */
+.course-table-wrapper {
+  max-height: 360px;
+  overflow-y: auto;
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+}
+
+/* 通用表格樣式 */
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.course-table th {
+  background-color: var(--color-primary-soft);
+  font-weight: 600;
+  border: 1px solid var(--color-border-soft);
+  padding: 10px;
+  text-align: center;
+}
+
+.course-table td {
+  border: 1px solid var(--color-border-soft);
+  padding: 10px;
+  text-align: center;
+}
+
+.bus-table td { text-align: left; } /* 公車表格靠左對齊 */
+
+/* ===============================
+   按鈕 (Buttons)
+   =============================== */
+.btn, .btn-primary, .btn-outline {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.18s ease;
+  border: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* 藍綠主色按鈕 */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+  box-shadow: var(--shadow-subtle);
+}
+.btn-primary:hover {
+  background-color: #3c7a8a;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* 框線按鈕 */
+.btn-outline {
+  background-color: #fff;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  box-shadow: var(--shadow-subtle);
+}
+.btn-outline:hover {
+  background-color: var(--color-primary-soft);
+  transform: translateY(-1px);
+}
+
+/* ===============================
+   圖片與佔位符 (Images)
+   =============================== */
+.image-wrapper, .featured-block-placeholder {
+  background-color: var(--color-surface-soft);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-soft);
+  padding: 12px;
+}
+
+.image-wrapper img, .featured-block-placeholder img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius-sm);
+}
+
+/* ===============================
+   地方知識學 (Local Knowledge - 來自 style1.css)
+   =============================== */
+.section-intro {
+  margin-bottom: 28px;
+  line-height: 1.7;
+  color: var(--color-text-main);
+  font-size: 15px;
+}
+
+.lk-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.lk-card {
+  background-color: var(--color-surface-soft);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border: 1px solid var(--color-border-soft);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.lk-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-soft);
+  border-color: rgba(74, 144, 164, 0.3);
+  background-color: #fff;
+}
+
+.lk-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.icon-green {
+  background: linear-gradient(135deg, var(--color-primary), #6fb0c0);
+  box-shadow: 0 4px 8px rgba(74, 144, 164, 0.2);
+}
+
+.icon-orange {
+  background: linear-gradient(135deg, var(--color-accent), #f7c498);
+  box-shadow: 0 4px 8px rgba(242, 166, 106, 0.2);
+}
+
+.lk-content { flex: 1; }
+.lk-heading { margin: 0 0 8px; font-size: 18px; font-weight: 700; color: var(--color-text-main); }
+.lk-text { margin: 0; font-size: 14px; line-height: 1.6; color: var(--color-text-sub); }
+
+/* ===============================
+   課務系統 (公告與 Iframe - 來自 style1.css)
+   =============================== */
+.course-system-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.announcement-card {
+    background-color: #fff3cd;
+    border-left: 5px solid #e67e22;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: #856404;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.announcement-card h3 {
+    margin-top: 0;
+    color: #d35400;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.iframe-wrapper {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border: 2px solid #e67e22;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.course-iframe { width: 100%; height: 100%; border: none; }
+
+.iframe-fallback {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+.iframe-fallback a { color: #e67e22; font-weight: bold; text-decoration: none; }
+.iframe-fallback a:hover { text-decoration: underline; }
+
+/* =========================================
+   週課表現代優化版 (Refined Schedule Grid)
+   ========================================= */
+
+.schedule-container {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 30px 15px; /* 增加一點內距讓畫面呼吸 */
+}
+
+/* --- 第一區：時間導覽 (Time Nav) --- */
+.time-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; /* 加一條淡淡的分隔線 */
+    flex-wrap: wrap;
+}
+
+.nav-pill {
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    color: #666;
+    background-color: #f0f2f5; /* 預設淺灰底，比較柔和 */
+}
+
+.nav-pill:hover {
+    background-color: #e4e6eb;
+    color: #333;
+}
+
+.nav-pill.active {
+    background-color: var(--color-primary); /* #4a90a4 */
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(74, 144, 164, 0.3);
+}
+
+/* --- 第二區：課程類別網格 (Grid System) - 核心修改 --- */
+.category-grid {
+    display: grid;
+    /* 關鍵：設定最小寬度，讓瀏覽器自動計算一行放幾個，且自動填滿 */
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); 
+    gap: 12px;
+    max-width: 1000px; /* 限制最大寬度，避免在大螢幕拉太長 */
+    margin: 0 auto 35px;
+}
+
+.cat-btn {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #555;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid #e0e0e0;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.cat-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background-color: #f9fbfd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+/* 特別強調：投資理財 (維持您的橘色系) */
+.cat-btn.highlight {
+    background-color: #fff8f0;
+    color: #d35400;
+    border-color: #ffe0b2;
+}
+.cat-btn.highlight:hover {
+    background-color: #ffe0b2;
+    transform: translateY(-2px);
+}
+
+/* --- 第三區：狀態標籤 (Status Tags) --- */
+.status-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 35px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.status-tag {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 20px; /* 比較圓潤 */
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    background: #fff;
+}
+
+/* 讓圓點稍微大一點 */
+.status-tag::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+    background-color: currentColor;
+}
+
+.status-tag:hover {
+    transform: scale(1.05); /* 微微放大 */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* 狀態顏色微調，讓背景更淡，文字更深，增加對比度 */
+.c-red    { color: #d63031; background-color: #ffeaea; border: 1px solid #fadcdc; }
+.c-orange { color: #e17055; background-color: #fff0e6; border: 1px solid #fae3d9; }
+.c-blue   { color: #0984e3; background-color: #e7f5ff; border: 1px solid #ddecfa; }
+.c-green  { color: #00b894; background-color: #e6fffa; border: 1px solid #d4f7f0; }
+.c-teal   { color: #00cec9; background-color: #e0fffe; border: 1px solid #cbf7f5; }
+.c-purple { color: #6c5ce7; background-color: #f3f0ff; border: 1px solid #e5e0fa; }
+
+
+/* --- 第四區：一體化搜尋列 (Unified Search Bar) --- */
+.search-container-unified {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-radius: 50px;
+    padding: 4px;
+    background: #fff;
+    border: 1px solid #ddd;
+    transition: border 0.3s;
+}
+
+.search-container-unified:focus-within {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 20px rgba(74, 144, 164, 0.2);
+}
+
+.unified-input {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    flex: 1; /* 佔滿剩餘空間 */
+    border-radius: 50px 0 0 50px;
+    color: #555;
+}
+
+.unified-btn {
+    border: none;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background 0.2s;
+    margin-left: -10px; /* 稍微往左蓋一點，確保無縫 */
+}
+.unified-btn:hover { background-color: #3c7a8a; }
+
+.unified-clear {
+    border: none;
+    background: transparent;
+    color: #999;
+    cursor: pointer;
+    padding: 0 15px;
+    font-weight: 500;
+    border-left: 1px solid #eee;
+    transition: color 0.2s;
+}
+.unified-clear:hover { color: #d63031; }
+
+/* RWD 調整 */
+@media (max-width: 600px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr); /* 手機版固定兩欄 */
+    }
+    .search-container-unified {
+        width: 100%;
+    }
+}
+/* ===============================
+   里長留言看板 (Chief Section - 來自 style1.css)
+   =============================== */
+.chief-search-box {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.chief-select {
+  padding: 12px 20px;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+  outline: none;
+  min-width: 160px;
+  transition: border-color 0.3s;
+  color: #555;
+}
+
+.chief-select:focus { border-color: #e67e22; }
+
+.chief-search-input {
+  flex: 1;
+  padding: 12px 20px;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.chief-search-input:focus {
+  outline: none;
+  border-color: #e67e22;
+  box-shadow: 0 0 8px rgba(230, 126, 34, 0.2);
+}
+
+.chief-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.chief-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 20px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+}
+
+.chief-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  border-color: #e67e22;
+}
+
+.chief-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fdf2e9;
+  margin-bottom: 15px;
+  background-color: #eee;
+}
+
+.chief-li-name { font-size: 1.3rem; color: #e67e22; font-weight: bold; margin: 0 0 5px; }
+.chief-name { font-size: 1rem; color: #555; margin: 0 0 15px; font-weight: 500; }
+
+.chief-btn {
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.chief-btn:hover { background-color: #d35400; }
+
+/* Modal 彈窗 */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  backdrop-filter: blur(3px);
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px; right: 20px;
+  font-size: 28px;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s;
+  line-height: 1;
+}
+.modal-close:hover { color: #333; }
+
+.modal-header {
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.modal-avatar-lg {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e67e22;
+}
+
+.modal-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.modal-info-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.modal-info-list i {
+  width: 25px;
+  color: #e67e22;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.modal-history {
+  background: #fdf8f5;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+}
+
+.modal-history h4 {
+  margin-top: 0; margin-bottom: 10px; color: #d35400;
+  border-left: 4px solid #d35400; padding-left: 10px;
+}
+
+.message-section {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+.msg-input, .msg-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.msg-input:focus, .msg-textarea:focus {
+  outline: none;
+  border-color: #e67e22;
+  background-color: #fff;
+}
+
+.msg-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* ===============================
+   外部資源頁 (Resource Cards - 來自 style.css)
+   =============================== */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* 預設 4 欄 */
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.resource-card {
+  background-color: var(--color-surface);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.resource-card-header {
+  background: linear-gradient(135deg, #4a90a4, #6fb0c0);
+  color: #fff;
+  text-align: center;
+  padding: 10px 14px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+}
+
+.resource-card-body {
+  padding: 12px 16px 16px;
+  font-size: 14px;
+}
+
+.resource-card-body ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.resource-card-body li + li {
+  margin-top: 10px;
+  padding-top: 6px;
+  border-top: 1px solid var(--color-border-soft);
+}
+
+.resource-link {
+  text-decoration: none;
+  color: var(--color-text-main);
+  border-bottom: 1px solid rgba(130, 140, 160, 0.5);
+  padding-bottom: 2px;
+  transition: color 0.18s ease, border-bottom-color 0.18s ease, transform 0.12s ease;
+}
+
+.resource-link:hover {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+/* 資源三欄列表樣式 */
+.resource-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.resource-column-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 16px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.resource-column-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 20px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #FFB067 0%, #4BA3C3 100%);
+}
+
+.resource-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resource-link-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.resource-link-item::before {
+  content: "▸";
+  font-size: 12px;
+  color: #999;
+}
+
+/* ===============================
+   失智專區 & 圖片排版 (Featured Block - 來自 style.css)
+   =============================== */
+.featured-block {
+  /* 這邊要小心，style1 也有用到，但 style.css 對失智專區有特殊設定 */
+  background-color: var(--color-surface-soft);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.featured-text-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: var(--color-primary);
+}
+
+.featured-text-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+/* 失智專區：圖片＋文字左右排版 */
+.featured-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* 左側圖片容器 (在 featured-row 內時的特殊樣式) */
+.featured-row .featured-block {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 0;
+  text-align: left;
+  flex: 0 0 260px; /* 固定寬度 */
+}
+
+.featured-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.featured-text {
+  flex: 1;
+  padding-top: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dementia-section {
+  margin-top: 32px;
+}
+
+/* ===============================
+   其他表單與網格 (Forms, Info Grid, Pagination - 來自 style.css)
+   =============================== */
+/* 舊版搜尋框樣式 (如 resource 頁面用到) */
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 24px;
+  margin-top: 8px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.form-input, .form-select {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-soft);
+  background-color: var(--color-surface-soft);
+  transition: border 0.18s ease, box-shadow 0.18s ease;
+}
+
+.form-input:focus, .form-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(74, 144, 164, 0.15);
+  outline: none;
+}
+
+/* 報名須知網格 */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+  margin-top: 12px;
+}
+
+.info-item {
+  background: var(--color-surface-soft);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--color-border-soft);
+}
+
+.info-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.info-text {
+  font-size: 14px;
+  color: var(--color-text-main);
+}
+
+/* 分頁 (Pagination) */
+.pager {
+  margin-top: 8px;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.pager a {
+  text-decoration: none;
+  color: var(--color-text-sub);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.pager a.current {
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.pager a:hover {
+  background-color: #e6ebf2;
+}
+
+/* 外部分頁 (Pager Outside) */
+.pager-outside {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 20px;
+  gap: 8px;
+}
+
+.pager-outside .page, .pager-outside .arrow {
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: #f2f2f2;
+  transition: 0.2s;
+}
+
+.pager-outside .page:hover { background: #e0e0e0; }
+
+.pager-outside .active {
+  background-color: #0e7a80;
+  color: white;
+  border-radius: 50%;
+}
+
+.featured-page { display: none; }
+.featured-page.active { display: block; }
+
+/* ===============================
+   RWD 手機版調整 (Media Queries)
+   =============================== */
+@media (max-width: 900px) {
+  /* 容器邊距 */
+  .container { padding-inline: 12px; }
+
+  /* 地方知識學：變成橫向滑動 */
+  .lk-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 24px;
+    margin: 0 -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .lk-grid::-webkit-scrollbar { display: none; }
+
+  .lk-card {
+    min-width: 280px;
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+    padding: 18px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lk-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+  }
+
+  /* 欄位調整為單欄 */
+  .resource-grid, 
+  .search-grid, 
+  .info-grid, 
+  .resource-columns {
+    grid-template-columns: 1fr;
+  }
+
+  /* 失智專區：上下排 */
+  .featured-row {
+    flex-direction: column;
+  }
+  .featured-row .featured-block {
+    flex-basis: auto;
+    width: 100%;
+  }
+  .featured-text {
+    padding: 10px 0 0 0;
+  }
+
+  /* 里長與週課表 */
+  .chief-search-box { flex-direction: column; }
+  .chief-select, .chief-search-input { width: 100%; }
+
+  .schedule-search-area, .search-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+  .schedule-input, .styled-input { width: 100%; }
+  
+  /* 按鈕滿版 */
+  .btn-time, .btn-category {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
