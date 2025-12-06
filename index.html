@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>中正社區大學網站首頁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 如果你的 CSS 叫 style.css，並且跟 index.html 同一層，就這樣寫 -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 給首頁用一點簡單排版，不會影響你原本的 CSS */
+    .home-wrapper {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 24px;
+      border-radius: 16px;
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(15, 52, 67, 0.08);
+      text-align: center;
+    }
+    .home-title {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      color: #1f2933;
+    }
+    .home-subtitle {
+      font-size: 16px;
+      color: #607080;
+      margin-bottom: 32px;
+    }
+    .home-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .home-btn {
+      display: inline-block;
+      min-width: 180px;
+      padding: 12px 24px;
+      border-radius: 999px;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #ffffff;
+      background: linear-gradient(135deg, #ffb067, #2b898f);
+      box-shadow: 0 6px 14px rgba(43, 137, 143, 0.35);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    }
+    .home-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(43, 137, 143, 0.4);
+      opacity: 0.96;
+    }
+    .home-note {
+      margin-top: 28px;
+      font-size: 13px;
+      color: #8a98a7;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="home-wrapper">
+    <h1 class="home-title">中正社區大學</h1>
+    <p class="home-subtitle">課程專區與外部資源示範網站</p>
+
+    <div class="home-links">
+      <a href="courses.html" class="home-btn">前往課程專區</a>
+      <a href="resources.html" class="home-btn">前往外部資源</a>
+    </div>
+
+    <p class="home-note">
+      ※ 這是暫時首頁（index.html）。<br>
+      之後如果你做了正式首頁，只要改這個檔案內容就可以囉。
+    </p>
+  </main>
+
+</body>
+</html>
