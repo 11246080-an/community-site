@@ -266,4 +266,53 @@ function closeChiefModal() {
         document.body.style.overflow = 'auto';
     }
 }
+// =====地方知識 =====
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. 取得所有按鈕與內容區塊
+    const navButtons = document.querySelectorAll('.lk-nav-btn');
+    const tabContents = document.querySelectorAll('.lk-tab-content');
 
+    // 2. 為每個按鈕添加點擊事件
+    navButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // 移除所有按鈕的 active 狀態
+            navButtons.forEach(b => b.classList.remove('active'));
+            // 移除所有內容的 active 狀態
+            tabContents.forEach(c => c.classList.remove('active'));
+
+            // 為被點擊的按鈕加上 active
+            this.classList.add('active');
+
+            // 取得對應的內容 ID (data-tab 屬性)
+            const targetId = this.getAttribute('data-tab');
+            const targetContent = document.getElementById(targetId);
+
+            // 如果找到對應內容，則顯示它
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+
+    // 3. 簡單輪播功能
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) slide.classList.add('active');
+        });
+    }
+
+    function nextSlide() {
+        if(slides.length === 0) return;
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // 每 5 秒自動切換
+    if(slides.length > 0) {
+        setInterval(nextSlide, 5000);
+    }
+});
