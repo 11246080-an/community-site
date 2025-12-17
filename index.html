@@ -129,35 +129,16 @@
 
     <!-- ===== 上方輪播圖 ===== -->
     <section>
-        <div class="lk-carousel" id="heroSlider">
+      <div class="lk-carousel" data-carousel="hero">
+        <div class="carousel-slide active" style="background-image: url('img/首頁/518國際博物館日.jpg');"></div>
+        <div class="carousel-slide" style="background-image: url('img/首頁/2024春季公民週.jpg');"></div>
+        <div class="carousel-slide" style="background-image: url('img/首頁/中正區2025歷史復活節.jpg');"></div>
 
-            <!-- slide 1 -->
-            <div class="carousel-slide active"
-                style="background-image: url('img/首頁/518國際博物館日.jpg');">
-            </div>
+        <div class="slider-btn left">❮</div>
+        <div class="slider-btn right">❯</div>
 
-            <!-- slide 2 -->
-            <div class="carousel-slide"
-                style="background-image: url('img/首頁/2024春季公民週.jpg');">                
-            </div>
-
-            <!-- slide 3 -->
-            <div class="carousel-slide"
-                style="background-image: url('img/首頁/中正區2025歷史復活節.jpg');">
-            </div>
-
-            <!-- 左右箭頭 -->
-            <div class="slider-btn left" onclick="changeSlide(-1)">❮</div>
-            <div class="slider-btn right" onclick="changeSlide(1)">❯</div>
-
-            <!-- 小圓點 -->
-            <div class="dots" id="heroDots">
-                <div class="dot active" onclick="goToSlide(0)"></div>
-                <div class="dot" onclick="goToSlide(1)"></div>
-                <div class="dot" onclick="goToSlide(1)"></div>
-            </div>
-
-        </div>
+        <div class="dots"></div>
+      </div>
     </section>
 
 
@@ -175,12 +156,12 @@
       </div>
 
       <table class="announce-table">
-        <tr><td>【教務處】113 學年度第 2 學期選課加退選公告，即日起開放申請。</td><td>2025-09-05</td></tr>
-        <tr><td>【學生事務組】歡迎志工招募活動現正報名中，歡迎踴躍參加。</td><td>2025-09-05</td></tr>
-        <tr><td>【資訊中心】系統維護通知，11 月 10 日（一）22:00 進行停機作業。</td><td>2025-09-04</td></tr>
-        <tr><td>【總務處】校園停電公告，11 月 8 日（六）上午 8 點至 12 點施工。</td><td>2025-09-04</td></tr>
-        <tr><td>【研究發展組】教師研究補助申請，即日起至 12 月 15 日止。</td><td>2025-09-04</td></tr>
-        <tr><td>【圖書館】期末延長開館時段，自 12 月 1 日起實施。</td><td>2025-09-03</td></tr>
+        <tr class="tab-history"><td>【教務處】113 學年度第 2 學期選課加退選公告，即日起開放申請。</td><td>2025-09-05</td></tr>
+        <tr class="tab-eco"><td>【學生事務組】歡迎志工招募活動現正報名中，歡迎踴躍參加。</td><td>2025-09-05</td></tr>
+        <tr class="tab-aging"><td>【資訊中心】系統維護通知，11 月 10 日（一）22:00 進行停機作業。</td><td>2025-09-04</td></tr>
+        <tr class="tab-pubs"><td>【總務處】校園停電公告，11 月 8 日（六）上午 8 點至 12 點施工。</td><td>2025-09-04</td></tr>
+        <tr class="tab-aging"><td>【研究發展組】教師研究補助申請，即日起至 12 月 15 日止。</td><td>2025-09-04</td></tr>
+        <tr class="tab-pubs"><td>【圖書館】期末延長開館時段，自 12 月 1 日起實施。</td><td>2025-09-03</td></tr>
       </table>
 
     </section>
@@ -188,62 +169,42 @@
     <!-- ===== 活動看板 ===== -->
     <section>
       <h2 class="section-title">活動看板</h2>
+      <div class="lk-carousel" data-carousel="event">
+        <div class="carousel-slide active" style="background-image: url('img/首頁/114-2期學員學習滿意度調查開跑啦.png');">
+          <div class="carousel-caption">
+            <span class="carousel-tag">最新活動</span>
+            <h3 class="carousel-title">114-2期學員學習滿意度調查開跑啦</h3>
+            <p>12/5前線上填寫問卷即可參加抽獎，得獎者將於12/12公告。</p>
+          </div>
+        </div>
+        <div class="carousel-slide" style="background-image: url('img/首頁/114-2期研習證書教師研習公務人員學習時數申請.png');">
+          <div class="carousel-caption">
+            <span class="carousel-tag">最新活動</span>
+            <h3 class="carousel-title">114-2期研習證書/教師研習/公務人員學習時數申請</h3>
+            <p>申請時間：即日起~115/1/2 止</p>
+          </div>
+        </div>
+        <div class="carousel-slide" style="background-image: url('img/首頁/我們與資訊的距離：媒體素養入門五堂課.png');">
+          <div class="carousel-caption">
+            <span class="carousel-tag">最新活動</span>
+            <h3 class="carousel-title">我們與資訊的距離：媒體素養入門五堂課</h3>
+            <p>假新聞、農場文、業配內容充斥版面，大腦總是不自覺被潛在偏見影響。</p>
+          </div>
+        </div>
+        <div class="carousel-slide" style="background-image: url('img/首頁/12345.jpg');">
+          <div class="carousel-caption">
+            <span class="carousel-tag">最新活動</span>
+            <h3 class="carousel-title">【《2025客家農遊會》淨零小屋共玩場X中正永續生活節</h3>
+            <p>北市客家公園戶外的「臺北客家農場」號召大家一起來「活動與公益共作」從「種植芥菜」開始，中正社大與淨零小屋的夥伴們，也帶來各種「永續生活」、「淨零減碳」的體驗活動。</p>
+          </div>
+        </div>
 
-          <section>
-            <div class="lk-carousel" id="heroSlider">
+        <div class="slider-btn left">❮</div>
+        <div class="slider-btn right">❯</div>
 
-                <!-- slide 1 -->
-                <div class="carousel-slide active"
-                    style="background-image: url('img/首頁/114-2期學員學習滿意度調查開跑啦.png');">
-                    <div class="carousel-caption">
-                        <span class="carousel-tag">最新活動</span>
-                        <h3 class="carousel-title">【114-2期學員學習滿意度調查開跑啦~】</h3>
-                       <p>114-2期學員學習滿意度調查開跑，如於12/5前線上填寫問卷即可參加抽獎，得獎者將於114/12/12於本校網站公告之。</p>
-                    </div>
-                </div>
-
-                <!-- slide 2 -->
-                <div class="carousel-slide"
-                    style="background-image: url('img/首頁/114-2期研習證書教師研習公務人員學習時數申請.png');">         
-                    <div class="carousel-caption">
-                        <span class="carousel-tag">最新活動</span>
-                        <h3 class="carousel-title">【114-2期研習證書/教師研習/公務人員學習時數申請】</h3>
-                        <p>申請時間：即日起~115/1/2 止</p>
-                    </div>
-                </div>
-
-                <!-- slide 3 -->
-                <div class="carousel-slide"
-                    style="background-image: url('img/首頁/我們與資訊的距離：媒體素養入門五堂課.png');">
-                    <div class="carousel-caption">
-                        <span class="carousel-tag">最新活動</span>
-                        <h3 class="carousel-title">【我們與資訊的距離：媒體素養入門五堂課】</h3>
-                        <p>在這個資訊科技快速發展，訊息爆炸的時代，你是否也曾對新聞、訊息的真偽感到疑惑？假新聞、農場文、業配內容充斥版面，我們的大腦總是不自覺地被潛在偏見影響。
-</p>
-                    </div>
-                </div>
-                
-                <!-- slide 4 -->
-                <div class="carousel-slide"
-                    style="background-image: url('img/首頁/12345.jpg');">
-                    <div class="carousel-caption">
-                        <span class="carousel-tag">最新活動</span>
-                        <h3 class="carousel-title">【《2025客家農遊會》淨零小屋共玩場X中正永續生活節</h3>
-                        <p>北市客家公園戶外的「臺北客家農場」號召大家一起來「活動與公益共作」從「種植芥菜」開始，中正社大與淨零小屋的夥伴們，也帶來各種「永續生活」、「淨零減碳」的體驗活動。
-</p>
-                    </div>
-                </div>
-
-                <!-- 小圓點 -->
-                <div class="dots" id="heroDots">
-                    <div class="dot active" onclick="goToSlide(0)"></div>
-                    <div class="dot" onclick="goToSlide(1)"></div>
-                    <div class="dot" onclick="goToSlide(1)"></div>
-                    <div class="dot" onclick="goToSlide(1)"></div>
-                </div>
-
-            </div>
-          </section>
+        <div class="dots"></div>
+      </div>
+    </section>
 
 
       <div style="text-align:center; margin-top:10px; letter-spacing:4px;">
@@ -300,6 +261,17 @@
                       <div class="lk-date">2025-05-15</div>
                       <h4 class="lk-card-title">2025沅陵椿萱節</h4>
                       <p class="lk-card-text">透一年一度、深受親子家庭喜愛的「2025沅陵椿萱節」，已於5月5日至5月11日熱鬧舉行並圓滿落幕。本活動由臺北市商業處指導，結合沅陵商圈與多個單位攜手辦理，活動內容豐富多元，吸引眾多市民熱情參與，不僅帶動商圈人潮，更展現社區深厚的凝聚力與創意能量。</p>
+                      <a style="font-size:14px; color:#555;">更多內容 ❯</a>
+                  </div>
+              </div>
+              <div class="lk-card" style=" cursor: pointer" onclick="window.open('https://www.cna.com.tw/postwrite/chi/375246')">
+                  <div class="lk-card-img-wrap">
+                      <img src="img/首頁/5.jpg" alt="竹美館×主婦聯盟地方創生飲食文化公眾論壇" class="lk-card-img">
+                  </div>
+                  <div class="lk-card-body">
+                      <div class="lk-date">2024-07-01</div>
+                      <h4 class="lk-card-title">竹美館×主婦聯盟地方創生飲食文化公眾論壇 倡議文化永續及文化扎根</h4>
+                      <p class="lk-card-text">國立新竹生活美學館於今年度主辦兩場「飲食文化×地方創生」公眾論壇，以飲食文化回應地方創生與食農教育推動議題，</p>
                       <a style="font-size:14px; color:#555;">更多內容 ❯</a>
                   </div>
               </div>
@@ -360,52 +332,110 @@
 
   <!-- ===== JS：輪播圖（簡易） ===== -->
   <script>
-    let currentSlide = 0;
-    let autoPlayTimer = null;
+    class Carousel {
+  constructor(container, interval = 3000) {
+    this.container = container;
+    this.slides = container.querySelectorAll(".carousel-slide");
+    this.dotsContainer = container.querySelector(".dots");
+    this.prevBtn = container.querySelector(".slider-btn.left");
+    this.nextBtn = container.querySelector(".slider-btn.right");
 
-    function showSlide(n) {
-        const slides = document.querySelectorAll(".carousel-slide");
-        const dots = document.querySelectorAll(".dot");
+    this.current = 0;
+    this.timer = null;
+    this.interval = interval;
 
-        slides.forEach(slide => slide.classList.remove("active"));
-        dots.forEach(dot => dot.classList.remove("active"));
+    this.init();
+  }
 
-        currentSlide = (n + slides.length) % slides.length;
+  init() {
+    this.createDots();
+    this.showSlide(0);
+    this.startAutoPlay();
 
-        slides[currentSlide].classList.add("active");
-        dots[currentSlide].classList.add("active");
-    }
+    this.prevBtn?.addEventListener("click", () => this.prev());
+    this.nextBtn?.addEventListener("click", () => this.next());
+  }
 
-    function changeSlide(n) {
-        showSlide(currentSlide + n);
+  createDots() {
+    if (!this.dotsContainer) return;
+    this.dotsContainer.innerHTML = "";
 
-        // 有手動切換時重新啟動自動播放
-        restartAutoPlay();
-    }
+    this.slides.forEach((_, index) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      dot.addEventListener("click", () => this.showSlide(index));
+      this.dotsContainer.appendChild(dot);
+    });
 
-    function goToSlide(n) {
-        showSlide(n);
+    this.dots = this.dotsContainer.querySelectorAll(".dot");
+  }
 
-        // 點點切換也要重啟自動播放
-        restartAutoPlay();
-    }
+  showSlide(index) {
+    this.slides.forEach(s => s.classList.remove("active"));
+    this.dots?.forEach(d => d.classList.remove("active"));
 
-    /* ===========================
-    自動播放（每 3 秒）
-    =========================== */
-    function startAutoPlay() {
-        autoPlayTimer = setInterval(() => {
-            showSlide(currentSlide + 1);
-        }, 3000); // ← 3秒
-    }
+    this.current = (index + this.slides.length) % this.slides.length;
+    this.slides[this.current].classList.add("active");
+    this.dots?.[this.current]?.classList.add("active");
 
-    function restartAutoPlay() {
-        clearInterval(autoPlayTimer);
-        startAutoPlay();
-    }
+    this.restartAutoPlay();
+  }
 
-    // 啟動自動播放
-    startAutoPlay();
+  next() { this.showSlide(this.current + 1); }
+  prev() { this.showSlide(this.current - 1); }
+
+  startAutoPlay() {
+    this.timer = setInterval(() => this.next(), this.interval);
+  }
+
+  restartAutoPlay() {
+    clearInterval(this.timer);
+    this.startAutoPlay();
+  }
+}
+
+
+/* ===============================
+   2️⃣ 校務公告 Tab 功能
+   =============================== */
+function initAnnouncementTabs() {
+  const buttons = document.querySelectorAll(".lk-nav-btn");
+  const rows = document.querySelectorAll(".announce-table tr");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // 切換 active 樣式
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const tab = btn.dataset.tab;
+
+      rows.forEach(row => {
+        if (tab === "tab-home") {
+          row.style.display = "";
+        } else {
+          row.style.display = row.classList.contains(tab) ? "" : "none";
+        }
+      });
+    });
+  });
+}
+
+
+/* ===============================
+   3️⃣ DOM 載入後初始化所有功能
+   =============================== */
+document.addEventListener("DOMContentLoaded", () => {
+
+  // 初始化所有輪播圖（不管有幾個）
+  document.querySelectorAll(".lk-carousel").forEach(carousel => {
+    new Carousel(carousel, 3000);
+  });
+
+  // 初始化校務公告 Tab
+  initAnnouncementTabs();
+
+});
   </script>
 
 </body>
